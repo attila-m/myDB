@@ -24,9 +24,11 @@
   "homepage": "https://github.com/attila-m/myDB#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.3.0",
     "modules": "^0.4.0",
+    "mongoose": "^5.7.13",
     "pug": "^2.0.4",
     "upper-case": "^2.0.0"
   },
