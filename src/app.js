@@ -15,6 +15,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 // routes
 app.use('/', routes);
 
+// public
+app.use(express.static('public'));
+
 
 module.exports = app;
 

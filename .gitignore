@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# valid logins to see registry
+users.htpasswd
