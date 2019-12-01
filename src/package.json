@@ -1,0 +1,33 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "myDB, personal db for stuff",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon ./start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attila-m/myDB.git"
+  },
+  "keywords": [
+    "db",
+    "movies",
+    "music"
+  ],
+  "author": "mattila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/attila-m/myDB/issues"
+  },
+  "homepage": "https://github.com/attila-m/myDB#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "modules": "^0.4.0",
+    "upper-case": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
