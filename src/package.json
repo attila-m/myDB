@@ -25,6 +25,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "modules": "^0.4.0",
+    "pug": "^2.0.4",
     "upper-case": "^2.0.0"
   },
   "devDependencies": {
