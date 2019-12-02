@@ -13,7 +13,7 @@ mongoose.connection
 		console.log(`Mongoose connection open on ${process.env.MONGO_URI}`);
 	})
 	.on('error', (err) => {
-		consol.log(`Connection error: ${err.message}`);
+		console.log(`Connection error: ${err.message}`);
 	})
 
 
