@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	if movies.length
+		table.listing-table.table-dark.table-striped
+			tr
+				th Title
+				th Runtime
+			each movie in movies
+				tr
+					td= movie.title
+					td= movie.runtime
+	else
+		p No movies in the database yet.

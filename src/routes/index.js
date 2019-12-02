@@ -6,6 +6,7 @@ const auth = require('http-auth');
 const { body, validationResult } = require('express-validator');
 
 const Registration = mongoose.model('Registration');
+const Movie = mongoose.model('Movie');
 
 const basic = auth.basic({
 	file: path.join(__dirname, '../users.htpasswd')
@@ -52,6 +53,26 @@ router.get('/registrations', auth.connect(basic), (req, res) => {
 			res.send('Sorry, something went wrong!');
 		})
 
+})
+
+router.get('/movies', auth.connect(basic), (req, res) => {
+
+	Movie.find()
+		.then((movies) => {
+			res.render('movies', {title: 'Listing movies', movies});
+		})
+		.catch(() => {
+			res.send('Sorry, something went wrong!');
+		})
+
+})
+
+// for testing the mongo connection
+router.get('/addmovietest', (req, res) => {
+	const movie = new Movie();
+	movie.title = "testTitle";
+	movie.id = 0;
+	movie.save();
 })
 
 module.exports = router;

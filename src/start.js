@@ -1,4 +1,5 @@
 require('./models/Registration');
+require('./models/Movie');
 
 const app = require('./app');
 
