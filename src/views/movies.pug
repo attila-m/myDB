@@ -1,6 +1,23 @@
 extends layout
 
 block content
+	-data = data || {}
+
+	if errors
+		ul.my-errors
+			for error in errors
+				li= error.msg
+
+	form(action="." method="POST", class="form-registration")
+		label(for="searchMovieTitle") Search for a movie:
+		input(
+			type="text"
+			id="searchMovieTitle"
+			name="searchMovieTitle"
+			class="form-control"
+			value=data.movieTitle
+		)
+
 	if movies.length
 		table.listing-table.table-dark.table-striped
 			tr

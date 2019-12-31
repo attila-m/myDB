@@ -67,6 +67,31 @@ router.get('/movies', auth.connect(basic), (req, res) => {
 
 })
 
+
+router.post('/movies', 
+	[
+		body('keyword')
+			.isLength({min: 1})
+			.withMessage('Please enter a keyword'),
+
+	], 
+	(req, res) => {
+ 		const errors = validationResult(req);
+ 		if (errors.isEmpty()) {
+ 			const moviesFound = res.body;
+ 			console.log(moviesFound)
+ 			res.render('movies', {
+ 				title: 'Movies found',
+ 				moviesFound: req.body
+ 			})
+ 		} else {
+			res.render('movies', {
+				title: 'Movies',
+				errors: errors.array()
+			});
+ 		}
+})
+
 // for testing the mongo connection
 router.get('/addmovietest', (req, res) => {
 	const movie = new Movie();
